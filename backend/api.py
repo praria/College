@@ -50,9 +50,26 @@ def search_students(name: Annotated[str, Query(min_length=1)]):
 
 
 @app.get("/students/eligibility")
-def check_student_eligibility(name: Annotated[str, Query(min_length=1)]):
-    matches = find_students(students, name)
+def check_student_eligibility(
+    name: Annotated[str | None, Query(min_length=1)] = None,
+    student_id: int | None = None,
+):
+    if student_id is not None:
+        matches = [student for student in students if student.get("id") == student_id]
+    elif name is not None:
+        matches = find_students(students, name)
+    else:
+        raise HTTPException(
+            status_code=422,
+            detail="Provide either a student name or student ID.",
+        )
+
     if not matches:
+        if student_id is not None:
+            raise HTTPException(
+                status_code=404,
+                detail=f"No student with ID {student_id} was found.",
+            )
         raise HTTPException(status_code=404, detail=f"No student named '{name}' was found.")
 
     student = matches[0]
