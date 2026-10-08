@@ -1,9 +1,9 @@
 import streamlit as st
 
-from course_operations import AVAILABLE_COURSES, get_registered_courses
-from file_operations import save_students_json, students_csv_content
-from main import STUDENT_DATA_FILE, load_students
-from student_operations import add_student, find_students
+from backend.course_operations import AVAILABLE_COURSES, get_registered_courses
+from backend.data_store import STUDENT_DATA_FILE, load_students
+from backend.file_operations import save_students_json, students_csv_content
+from backend.student_operations import add_student, find_students
 
 
 st.set_page_config(page_title="Student Management System", page_icon="🎓")

@@ -26,5 +26,21 @@
       "Art",
       "English"
     ]
+  },
+  {
+    "id": 4,
+    "name": "Avadoot",
+    "age": 50,
+    "courses": [
+      "Mathematics"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "VP",
+    "age": 53,
+    "courses": [
+      "Science"
+    ]
   }
 ]
