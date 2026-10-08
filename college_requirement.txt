@@ -1,0 +1,31 @@
+Generate a Python project skeleton for a Student Management CLI system.
+
+Requirements:
+- The program should load student data from a JSON file (students.json).
+- Show a main menu with options 1–9.
+- Based on user choice, call the appropriate function.
+- Each option should be implemented as a separate function with hard‑coded placeholder logic for now.
+
+Menu Options:
+1. Register Student → take input and add to student list
+2. View Students → display all registered students
+3. Search Student → search by name and show result
+4. Check Eligibility → check if age >= 18
+5. View Courses → display all available courses (list)
+6. View Registered Courses → display unique courses (set)
+7. Save Students → save current student list to JSON file
+8. Export CSV → export student list to CSV file
+9. Exit → save data if not already saved and close program
+
+Structure:
+- Create modules for separation of concerns:
+  1. student_operations.py → register_student(), view_students(), search_student()
+  2. course_operations.py → view_courses(), view_registered_courses()
+  3. file_operations.py → save_students_json(), export_students_csv()
+- In main.py:
+  - Import all modules.
+  - Display menu and take user input.
+  - Call the corresponding function from the right module.
+  - Wrap execution inside a main() function.
+  - Use the `if __name__ == "__main__": main()` pattern.
+- Keep the code clean and minimal (skeleton only, with hard‑coded return values or placeholder print statements).

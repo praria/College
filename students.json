@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Leher Shrestha",
+    "age": 17,
+    "courses": [
+      "Mathematics",
+      "Science",
+      "Computer Science"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Basant Pant",
+    "age": 62,
+    "courses": [
+      "Mathematics"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Archana Singh",
+    "age": 51,
+    "courses": [
+      "Mathematics",
+      "Art",
+      "English"
+    ]
+  }
+]
